@@ -1,0 +1,12 @@
+<div>
+    <span>
+        <img src="../favicon.ico" width="40px" height="40px">
+        <h1>{{ title }}</h1>
+    </span>
+    <searchBar (newItemEvent)="setUrl($event)"></searchBar>
+</div>
+<div>
+    <History (newItemEvent)="setUrl($event)"></History>
+    <videoView [src]='url'></videoView>
+    <Bookmarks (newItemEvent)="setUrl($event)"></Bookmarks>
+</div>

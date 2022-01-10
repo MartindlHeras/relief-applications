@@ -57,3 +57,13 @@ Some requirements/clues:
 - The application should run on a single computer, using the port 8000 for the Django API and 4200 for the Angular app.
 
 Please provide all necessary information to run your application.
+
+1. Install nodejs.org (LTS)
+2. Type node --version (at least 6.9)
+3. Install Angular CLI (sudo npm install -g @angular/cli)
+4. ng --version
+5. ng new hello-world
+6. ng serve
+7. localhost:4200
+8. sudo npm install -g typescript
+9. tsc --version

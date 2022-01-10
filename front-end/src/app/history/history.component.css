@@ -1,0 +1,29 @@
+div {
+    background-color: black;
+    color: blanchedalmond;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin: 5px;
+    background-color: black;
+    color: blanchedalmond;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 0;
+}
+
+li {
+    text-align: center;
+    margin: 5px;
+    background-color: black;
+}
+
+li:hover {
+    background-color: brown;
+}

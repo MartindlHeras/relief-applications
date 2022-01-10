@@ -1,0 +1,14 @@
+<h2>History</h2>
+<div *ngIf="history.length > 0">
+  <ul>
+    <li *ngFor="let h of history"
+    [class.selected]="h === selectedH"
+    (click)="onSelect(h)"
+    class = "">
+      {{ h }}
+    </li>
+  </ul>
+</div>
+<div *ngIf="history.length == 0">
+  No history yet
+</div>

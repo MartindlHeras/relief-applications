@@ -1,0 +1,18 @@
+<div id="bookmarksWindow" *ngIf=bookmarksVisible>
+  <div *ngIf="bookmarks.length > 0">
+    Bookmarks
+    <ul>
+      <li *ngFor="let bookmark of bookmarks"
+      [class.selected]="bookmark === selectedBookmark"
+      (click)="onSelect(bookmark)">
+        {{ bookmark }}
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="bookmarks.length == 0">
+    No bookmarks yet
+  </div>
+</div>
+<button id="bookmark" (click)="showHide()">Bookmarks</button>
+  
+  

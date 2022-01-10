@@ -1,0 +1,43 @@
+div {
+    background-color: black;
+    color: blanchedalmond;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin: 5px;
+    background-color: black;
+    color: blanchedalmond;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+}
+
+li {
+    text-align: center;
+    margin: 5px;
+    background-color: black;
+}
+
+li:hover {
+    background-color: brown;
+}
+
+button {
+    max-width: 200px;
+    height: 30px;
+    border: 0px;
+    background-color: brown;
+    color: blanchedalmond;
+    margin-left: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+  
+  button:hover {
+    background-color: darkred;
+  }

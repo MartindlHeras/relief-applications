@@ -1,0 +1,30 @@
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: large;
+}
+
+input {
+    border: 2px solid;
+    padding: 5px;
+    margin: 5px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: rgba(256, 256, 256, 0.1);
+}
+
+button {
+    max-width: 200px;
+    height: 30px;
+    border: 0px;
+    background-color: brown;
+    color: blanchedalmond;
+    margin-left: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+  
+button:hover {
+background-color: darkred;
+}

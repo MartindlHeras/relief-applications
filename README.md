@@ -58,6 +58,8 @@ Some requirements/clues:
 
 Please provide all necessary information to run your application.
 
+### Front-End
+
 1. Install nodejs.org (LTS)
 2. Type node --version (at least 6.9)
 3. Install Angular CLI (sudo npm install -g @angular/cli)
@@ -67,3 +69,27 @@ Please provide all necessary information to run your application.
 7. localhost:4200
 8. sudo npm install -g typescript
 9. tsc --version
+
+### Back-End
+
+1. pipenv shell
+2. python manage.py startapp history/bookmarks
+3. add to settings.py
+4. add rest_framework also
+5. CORS in settings.py
+6. python manage.py makemigrations videoApp 
+7. python manage.py migrate videoApp
+8. Serialize first?
+9. methods written in views.py GET/POST
+10. urls.py and add them to the big urls.py
+
+### Versions
+
+- python
+- angular
+- django
+- rest_framework
+- brave
+- nodejs
+- typescript
+- cors

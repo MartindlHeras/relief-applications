@@ -2,16 +2,17 @@ form {
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: large;
+    font-size: x-large;
 }
 
 input {
     border: 2px solid;
     padding: 5px;
     margin: 5px;
-    width: 300px;
+    width: 500px;
+    height: 30px;
     border-radius: 10px;
-    background-color: rgba(256, 256, 256, 0.1);
+    background-color: rgba(256, 256, 256, 0.5);
 }
 
 button {

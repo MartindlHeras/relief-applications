@@ -8,6 +8,9 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { VideoViewComponent } from './video-view/video-view.component';
 import { HistoryComponent } from './history/history.component';
 import { BookmarksComponent } from './bookmarks/bookmarks.component';
+import { SharedService } from './shared.service';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,9 +23,10 @@ import { BookmarksComponent } from './bookmarks/bookmarks.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -16,11 +16,9 @@ def historyApi(request):
 
     elif request.method == 'POST':
         history_data = JSONParser().parse(request)
-        history_serializer = HistorySerializer(data=history_data, many=True)
+        history_serializer = HistorySerializer(data=history_data)
         if history_serializer.is_valid():
             history_serializer.save()
-            return JsonResponse("Ok", safe=False)
-        return JsonResponse("Error", safe=False)
 
 @csrf_exempt
 def bookmarksApi(request):
@@ -31,8 +29,6 @@ def bookmarksApi(request):
         
     elif request.method == 'POST':
         bookmarks_data = JSONParser().parse(request)
-        bookmarks_serializer = BookmarksSerializer(data=bookmarks_data, many=True)
+        bookmarks_serializer = BookmarksSerializer(data=bookmarks_data)
         if bookmarks_serializer.is_valid():
             bookmarks_serializer.save()
-            return JsonResponse("Ok", safe=False)
-        return JsonResponse("Error", safe=False)

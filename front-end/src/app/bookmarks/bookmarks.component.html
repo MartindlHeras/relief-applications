@@ -1,11 +1,11 @@
+<h2>Bookmarks</h2>
 <div id="bookmarksWindow" *ngIf=bookmarksVisible>
   <div *ngIf="bookmarks.length > 0">
-    Bookmarks
     <ul>
       <li *ngFor="let bookmark of bookmarks"
       [class.selected]="bookmark === selectedBookmark"
       (click)="onSelect(bookmark)">
-        {{ bookmark }}
+        {{ bookmark.Url }}
       </li>
     </ul>
   </div>

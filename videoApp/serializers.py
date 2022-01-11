@@ -5,9 +5,9 @@ from videoApp.models import History, Bookmarks
 class HistorySerializer(serializers.ModelSerializer):
     class Meta:
         model = History
-        fields = ('Url')
+        fields = ('id','Url')
 
 class BookmarksSerializer(serializers.ModelSerializer):
     class Meta:
         model = Bookmarks
-        fields = ('Url')
+        fields = ('id','Url')

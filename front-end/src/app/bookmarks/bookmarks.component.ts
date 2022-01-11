@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Output, EventEmitter } from '@angular/core';
-import { BOOKMARKS } from '../bookmarks';
+import { Output, Input, EventEmitter } from '@angular/core';
+import { SharedService } from '../shared.service';
+import { Subscription } from 'rxjs';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'Bookmarks',
@@ -8,10 +10,25 @@ import { BOOKMARKS } from '../bookmarks';
   styleUrls: ['./bookmarks.component.css']
 })
 export class BookmarksComponent {
-  bookmarks=BOOKMARKS;
+  bookmarks:any=[];
   bookmarksVisible=false;
   selectedBookmark?: string;
   @Output() newItemEvent = new EventEmitter<string>();
+
+  constructor (private service:SharedService, private dataService: DataService) { }
+
+  notifierSubscription: Subscription = this.dataService.subjectNotifier.subscribe(notified => {
+    this.refreshBookmarks();
+  });
+
+  ngOnInit() {
+    this.refreshBookmarks();
+  }
+
+  refreshBookmarks(){
+    this.service.getBookmarksList().subscribe(data=>{this.bookmarks=data;
+    });
+  }
 
   addNewItem(value: string) {
     this.newItemEvent.emit(value);
